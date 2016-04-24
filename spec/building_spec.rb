@@ -38,7 +38,7 @@ describe Building do
   end
 
   describe '#apartments_by_rent' do
-    it 'orders apartment by rent from smallest to largest' do
+    it 'orders apartments by rent from largest to smallest' do
       expect(building.apartments_by_rent).to eq [first_apartment, third_apartment, second_apartment]
     end
   end
