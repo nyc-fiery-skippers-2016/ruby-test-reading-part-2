@@ -39,13 +39,13 @@ describe Building do
 
   describe '#apartments_by_rent' do
     it 'orders apartment by rent from smallest to largest' do
-      expect(building.apartments_by_rent).to eq [first_apartment, third_apartment, second_apartment]
+      expect(building.apartments_by_rent).to eq [second_apartment, third_apartment, first_apartment]
     end
   end
 
   describe '#find_apartments_by_bedroom_count' do
     it 'should find apartment by input number of bedroom' do
-      expect(building.find_apartments_by_bedroom_count(1)). to eq second_apartment
+      expect(building.find_apartments_by_bedroom_count(1)). to eq [second_apartment]
     end
   end
 
