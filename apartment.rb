@@ -8,11 +8,7 @@ class Apartment
   end
 
   def total_sqft
-    array = []
-    rooms.each do |room_in_apt|
-      array << room_in_apt.sqft
-    end
-    array.reduce(:+)
+    rooms.collect { |room_in_apt| room_in_apt.sqft }.reduce(:+)
   end
 
   def price_per_sqft
