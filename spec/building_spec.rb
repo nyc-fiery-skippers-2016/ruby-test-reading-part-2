@@ -56,5 +56,4 @@ describe Building do
     end
   end
 
-
 end
