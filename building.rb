@@ -1,5 +1,4 @@
 require_relative 'apartment'
-require_relative 'room'
 
 class Building
 
@@ -10,8 +9,7 @@ attr_reader :apartments
   end
 
   def total_room_count
-    @apartments.reduce(0) {|sum, apartment|
-      sum += apartment.rooms.length}
+    self.apartments.reduce(0) {|sum, apartment| sum += apartment.rooms.length}
   end
 
   def total_monthly_revenue
@@ -30,13 +28,7 @@ attr_reader :apartments
   end
 
   def total_sqft
-  sqft_array = []
-    self.apartments.each do |apt|
-      apt.rooms.each do |room|
-        sqft_array << room.sqft
-      end
-    end
-  sqft_array.flatten.reduce(:+)
+    self.apartments.map {|apt| apt.rooms.map {|room| room.sqft}}.flatten.reduce(:+)
   end
 
 end

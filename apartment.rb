@@ -23,8 +23,7 @@ attr_reader :rooms, :monthly_rent
   end
 
   def bedroom_count
-    bedroom_array = @rooms.select {|room| room.name == "bedroom"}
-    bedroom_array.length
+   self.rooms.select {|room| room.name == "bedroom"}.length
   end
 
 end
