@@ -29,6 +29,7 @@ describe Apartment do
 
 
   describe 'sqft calculations' do
+
     describe '#total_sqft' do
       it 'return total sqft for all apartments' do
         expect(apartment.total_sqft).to eq 500
@@ -44,6 +45,7 @@ describe Apartment do
 
 
   describe 'count of rooms' do
+
     describe '#room_count' do
       it 'return number of room in apartment' do
         expect(apartment.room_count).to eq 2

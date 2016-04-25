@@ -5,7 +5,7 @@ require_relative '../room'
 
 describe Building do
 
-  let(:first_room) {Room.new(name: 'kitchen', sqft: 400 , window_count: rand(1..2))}
+  let(:first_room) {objec)}
   let(:second_room) {Room.new(sqft: 320, window_count: rand(1..2))}
   let(:third_room) {Room.new(sqft: 200, window_count: rand(1..2))}
 
