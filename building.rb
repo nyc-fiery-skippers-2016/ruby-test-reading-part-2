@@ -30,13 +30,14 @@ attr_reader :apartments
   end
 
   def total_sqft
-  @apartments.each do |apt|
-    apt.rooms.reduce do |sum, room|
-      sum += room.sqft
-      #This method is not working - the rspec is saying that "+" is an undefined method for the room object.  I thought that I was selecting the square feet of the room object.  This works in my tests below but not in the rspec.  Can you advise?
+  sqft_array = []
+    self.apartments.each do |apt|
+      apt.rooms.each do |room|
+        sqft_array << room.sqft
+      end
     end
+  sqft_array.flatten.reduce(:+)
   end
-end
 
 end
 

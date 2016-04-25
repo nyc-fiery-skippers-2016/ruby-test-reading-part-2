@@ -9,7 +9,7 @@ attr_reader :rooms, :monthly_rent
   end
 
   def total_sqft
-    @rooms.reduce(0) do |sum, room|
+    self.rooms.reduce(0) do |sum, room|
       sum += room.sqft
     end
   end
