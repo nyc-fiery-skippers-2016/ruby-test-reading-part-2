@@ -10,11 +10,7 @@ class Apartment
   end
 
   def total_sqft
-    sum = 0
-    @rooms.each do |room|
-      sum += room.sqft
-    end
-    sum
+    @rooms.reduce(0) { |sum, room| sum + room.sqft }
   end
 
   def price_per_sqft
