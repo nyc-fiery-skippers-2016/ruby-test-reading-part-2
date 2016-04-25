@@ -12,12 +12,9 @@ class Building
   def total_room_count
     @total_rooms = 0
       @apartments.each do |object|
-        # binding.pry
         @total_rooms += object.rooms.length
-        # binding.pry
       end
     @total_rooms
-    # binding.pry
   end
 
   def total_monthly_revenue
@@ -52,6 +49,7 @@ class Building
 
 
 end
+
 
 # p new_building.apartments.length
 # p new_building.total_room_count

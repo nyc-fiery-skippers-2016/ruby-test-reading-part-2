@@ -14,4 +14,3 @@ end
 # first_room = Room.new(name: 'kitchen', sqft: 120, window_count: 5)
 # p first_room.name
 # p first_room.sqft
-

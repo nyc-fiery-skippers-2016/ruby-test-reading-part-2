@@ -19,10 +19,8 @@ class Apartment
   end
 
   def price_per_sqft
-    # binding.pry
     price = self.monthly_rent / total_sqft
-    # binding.pry
-    price.to_f.round(4) # this still won't show me the decimal points, like how to show 2.9 and not 2.
+    price.to_f.round(4) # this still won't show me the complete answer up to decimal points. It shoudl return 2.9, not 2.
     # sprintf('%.2f', price.to_d)
   end
 
