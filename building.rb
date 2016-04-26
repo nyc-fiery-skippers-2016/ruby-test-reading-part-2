@@ -19,9 +19,20 @@ class Building
 		apartments.sort {|a,b| b.monthly_rent <=> a.monthly_rent}
 	end
 
+	# def find_apartments_by_bedroom_count(num)
+	# 	number = 0
+	# 	apartment_search = []
+	# 	apartments.select do |apartment| 
+	# 		if apartments.count {apartment.rooms[1].name == 'bedroom' } == num
+	# 			apartment_search << apartment
+	# 		end	
+	# 				return apartment_search
+	# 	end
+	# end
+
 	def find_apartments_by_bedroom_count(num)
-		apartments.select do |apartment| 
-	require 'pry'; binding.pry
+		apartments.find do |apartment|
+			# require 'pry'; binding.pry		 
 			apartment.bedroom_count == num 
 		end
 	end

@@ -5,7 +5,7 @@ class Apartment
 	attr_reader :rooms, :monthly_rent
 
 	def initialize(args={})
-		@rooms = args[:rooms]
+		@rooms = args[:rooms] || 'bedroom' 
 		@monthly_rent = args[:monthly_rent] || 1000
 	end
 
@@ -14,7 +14,7 @@ class Apartment
 	end
 
 	def price_per_sqft
-		monthly_rent.to_f / total_sqft
+		monthly_rent.fdiv(total_sqft)
 	end
 
 	def room_count
@@ -22,7 +22,7 @@ class Apartment
 	end
 
 	def bedroom_count
-		rooms.count { |name| name == "bedroom" }
+		rooms.count { |name| name.eql?("bedroom") }
 	end
 
 end
