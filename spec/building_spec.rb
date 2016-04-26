@@ -2,7 +2,6 @@ require_relative '../building'
 require_relative '../apartment'
 require_relative '../room'
 
-
 describe Building do
 
   let(:first_room) {Room.new(name: 'kitchen', sqft: 400 , window_count: rand(1..2))}
@@ -17,7 +16,6 @@ describe Building do
 
   let(:apartments) {[first_apartment, second_apartment, third_apartment]}
   let(:building) {Building.new(address: "123 Flatbush Ave", apartments: apartments)}
-
 
   describe 'attributes' do
     it 'has an apartments' do
@@ -48,7 +46,6 @@ describe Building do
       expect(building.find_apartments_by_bedroom_count(1)). to eq second_apartment
     end
   end
-
 
   describe '#total_sqft' do
     it 'returns total sqft for all apartments in the building' do

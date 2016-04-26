@@ -1,9 +1,7 @@
 require_relative '../apartment'
 require_relative '../room'
 
-
 describe Apartment do
-
 
   let(:first_room) {Room.new(name: 'kitchen', sqft: 120, window_count: rand(0..2))}
   let(:second_room) {Room.new(name: 'lounge', sqft: 380, window_count: rand(0..2))}
@@ -27,7 +25,6 @@ describe Apartment do
     end
   end
 
-
   describe 'sqft calculations' do
     describe '#total_sqft' do
       it 'return total sqft for all apartments' do
@@ -41,7 +38,6 @@ describe Apartment do
       end
     end
   end
-
 
   describe 'count of rooms' do
     describe '#room_count' do
