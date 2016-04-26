@@ -11,7 +11,11 @@
   2. Apartment#price_per_sqft - price per sqft of current apartment.
   3. Apartment#room_count  - total number of rooms in apartment.
   4. Apartment#bedroom_count - number of bedroom in apartment
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> 07010b5b560e53c80bae85135fd9e428c7e50b2f
 ### Release 2:
   Now we have Building with many Apartments. We need to find:
   1. Building#total_room_count - total count rooms in building.
