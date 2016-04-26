@@ -55,6 +55,4 @@ describe Building do
       expect(building.total_sqft).to eq 2160
     end
   end
-
-
 end
