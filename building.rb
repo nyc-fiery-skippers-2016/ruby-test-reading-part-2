@@ -1,33 +1,17 @@
 class Building
-  attr_reader :apartments, :address
+  attr_reader :apartments, :address, :total_room_count, :total_monthly_revenue, :apartments_by_rent, :total_sqft
+
   def initialize(args={})
     @address = args[:address]
     @apartments = args[:apartments]
-  end
-
-  def total_room_count
-    sum = 0
-    apartments.each{|apt|sum += apt.room_count}
-    sum
-  end
-
-  def total_monthly_revenue
-    sum = 0
-    apartments.each{|apt|sum += apt.monthly_rent}
-    sum
-  end
-
-  def apartments_by_rent
-    apartments.sort_by{|apt|apt.monthly_rent}.reverse
+    @total_room_count = apartments.reduce(0){|sum,apt|sum+apt.room_count}
+    @total_monthly_revenue = apartments.reduce(0){|sum,apt|sum+apt.monthly_rent}
+    @apartments_by_rent = apartments.sort_by{|apt|apt.monthly_rent}.reverse
+    @total_sqft = apartments.reduce(0){|sum,apt|sum+apt.total_sqft}
   end
 
   def find_apartments_by_bedroom_count(count)
-    apartments.find{|apt|apt.bedroom_count==count} #assuming not to return more than one apt because an array is not expected
+    apartments.find{|apt|apt.bedroom_count==count}
   end
 
-  def total_sqft
-    sum = 0
-    apartments.each{|apt|sum += apt.total_sqft}
-    sum
-  end
 end
