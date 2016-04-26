@@ -1,14 +1,13 @@
-
 class Building
   attr_reader :address, :apartments
 
   def initialize(args={})
-    @address = args.fetch(:address)
-    @apartments = args.fetch(:apartments)
+    @address = args.fetch(:address) { "000 No-Street" }
+    @apartments = args.fetch(:apartments) { [] }
   end
 
   def total_room_count
-    apartments.map{|apt| apt.rooms.length}.inject(:+)
+    apartments.map{|apt| apt.room_count}.inject(:+)
   end
 
   def total_monthly_revenue
