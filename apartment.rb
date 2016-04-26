@@ -1,4 +1,3 @@
-
 class Apartment
 
   attr_accessor :number, :monthly_rent, :rooms
