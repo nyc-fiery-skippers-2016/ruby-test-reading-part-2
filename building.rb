@@ -31,10 +31,11 @@ class Building
 	# end
 
 	def find_apartments_by_bedroom_count(num)
-		apartments.find do |apartment|
+		test = apartments.find do |apartment|
 			# require 'pry'; binding.pry		 
-			apartment.bedroom_count == num 
+			(apartment.bedroom_count == num 
 		end
+		return test
 	end
 
 	def total_sqft
