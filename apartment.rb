@@ -25,5 +25,4 @@ attr_reader :window_count, :rooms, :monthly_rent
 		rooms.count {|room| room.name == "bedroom"}
 		#rooms.count {|room| room.name.eql?("bedroom")}
 	end
-
 end
