@@ -10,7 +10,7 @@ describe Apartment do
 
   let(:generate_rooms) {[first_room, second_room]}
 
-  let(:apartment) { Apartment.new(number: '10#7', rooms: generate_rooms, monthly_rent: 1450) }
+  let(:apartment) { Apartment.new(number: '107', rooms: generate_rooms, monthly_rent: 1450) }
   let(:second_apartment) {Apartment.new}
 
   describe 'attributes' do
